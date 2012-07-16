@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nool</string>
+    <string name="confirm_exit_msg">Press again to close Nool</string>
+    <string name="entry_icon">Content Icon</string>
+    <string name="loading">Opening your Nool</string>
+    <string name="title_upcoming">UPCOMING</string>
+    <string name="title_overdue">OVERDUE</string>
+    <string name="title_completed">COMPLETED</string>
+    <string name="title_skipped">SKIPPED</string>
+    <string name="no_content">No Content found</string>
+    <string name="settings">Settings</string>
+    <string name="nool_settings">Nool Settings</string>
+    
+    <string name="title_ui_settings">UI Settings</string>
+    <string name="confirm_exit">Confirm Exit</string>
+    <string name="confirm_exit_desc">Press back key twice to exit</string>
+    <string name="confirm_delete">Confirm Delete</string>
+    <string name="confirm_delete_desc">Alert before deleting an item</string>
+    
+    <string name="title_background_sync">Background Sync</string>
+    <string name="wifi_network">WiFi Network</string>
+    <string name="wifi_network_desc">Sync via connected WiFi network</string>
+    <string name="mobile_network">Mobile Network</string>
+    <string name="mobile_network_desc">Sync via mobile internet connection</string>
+    
+    <string name="title_feedback">Feedback</string>
+    <string name="report_bug">Report Bug</string>
+    <string name="report_bug_desc">Report if anything went wrong</string>
+    <string name="request_feature">Suggest Feature</string>
+    <string name="request_feature_desc">Suggest features that you wish to have</string>
+    
+</resources>

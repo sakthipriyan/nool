@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="nool">
+        <item name="android:textColor">#00B0F0</item>
+    </style>
+</resources>

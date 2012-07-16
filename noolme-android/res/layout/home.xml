@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homeSwitcher"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:inAnimation="@anim/enter"
+    android:outAnimation="@anim/exit" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/marker_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/loading"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/homeContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/black" 
+             >
+
+            <ImageButton
+                android:id="@+id/addNew"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/header_icon_bg"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/hr_dimen2"
+                android:layout_marginBottom="@dimen/hr_dimen2"
+                android:contentDescription="add"
+                android:src="@drawable/add_button" 
+                android:scaleType="fitCenter"
+                />
+
+            <ImageButton
+                android:id="@+id/search"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/hr_dimen2"
+                android:layout_marginBottom="@dimen/hr_dimen2"
+                android:layout_toLeftOf="@id/addNew"
+                android:background="@drawable/header_icon_bg"
+                android:contentDescription="search"
+                android:src="@drawable/search_button" 
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/settings"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/hr_dimen2"
+                android:layout_marginBottom="@dimen/hr_dimen2"
+                android:layout_toLeftOf="@id/search"
+                android:background="@drawable/header_icon_bg"
+                android:contentDescription="settings"
+                android:src="@drawable/settings_button" 
+                android:scaleType="fitCenter"/>
+            <!--
+            <LinearLayout
+                android:id="@+id/homeHeaderStrip"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hr_dimen3"
+                android:layout_alignBottom="@id/settings"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/settings" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:background="@color/dark_green" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:background="@color/dark_red" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:background="@color/dark_blue" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:background="@color/dark_violet" />
+            </LinearLayout>
+            -->
+
+            <TextView
+                android:id="@+id/headerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/settings"
+                android:layout_toLeftOf="@id/settings"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="Nool Tasks"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textStyle="bold" 
+                android:textColor="@color/light_blue"
+                android:layout_marginBottom="@dimen/hr_dimen2"/>
+        </RelativeLayout>
+        <!--
+             <LinearLayout
+            android:id="@+id/menuBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Menu comes here" />
+        </LinearLayout>
+        -->
+        <!--
+             <com.viewpagerindicator.TabPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"  
+            />
+        -->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/homepager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/headerLayout" >
+
+            <!-- android:layout_below="@id/menuBar" -->
+
+            <android.support.v4.view.PagerTitleStrip
+                android:id="@+id/titleStrip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="@drawable/header_bg"
+                android:paddingBottom="@dimen/hr_dimen2" />
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+</ViewSwitcher>
